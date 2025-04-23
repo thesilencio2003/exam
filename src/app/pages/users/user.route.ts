@@ -1,8 +1,7 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [
+export default [
   {
-  
     path: '',
     redirectTo: 'users',
     pathMatch: 'full',
@@ -10,11 +9,11 @@ export const routes: Routes = [
   {
     path: 'users',
     title: 'Users',
-    loadComponent: () => import('./pages/users/list-users/users.component'),
+    loadComponent: () => import('./list-users/users.component'),
   },
   {
     path: 'users/:id',
     title: 'Users-Detail',
-    loadComponent: () => import('./pages/users/detalle-usuario/detalle-usuario.component'), 
+    loadComponent: () => import('./detalle-usuario/detalle-usuario.component'),
   },
-];
+] as Routes;

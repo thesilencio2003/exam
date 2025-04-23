@@ -1,0 +1,45 @@
+<div class="row mt-5">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div  class="card-body">
+          <img
+          src="./assets/img/profile.png"
+          alt="User Profile"
+          class="rounded-circle profile-img mb-3"
+          width="150px"
+          height="150px"
+        />
+          <h5 class="card-title">{{ user?.name }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ user?.username }}</h6>
+          <p class="card-text">
+            <i class="bi bi-envelope me-2">Email</i> {{ user?.email }}
+          </p>
+          <p class="card-text">
+            <i class="bi bi-telephone-fill me-2">Telefono</i> {{ user?.phone }}
+          </p>
+          <p class="card-text">
+            <i class="bi bi-globe me-2">Web</i> <a href="{{ user?.website }}" target="_blank" rel="noopener noreferrer">{{ user?.website }}</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-8">
+      <div  class="card">
+        <div class="card-body">
+          <h5 class="card-title">Address</h5>
+          <p class="card-text mb-2">
+            <i class="bi bi-geo-alt-fill me-2"></i>
+           Address: {{ user?.address?.street }}, suite {{ user?.address?.suite }} <br />
+           City {{ user?.address?.city }}, zipcode {{ user?.address?.zipcode }}
+          </p>
+          <h5 class="card-title mt-3">Company</h5>
+          <p class="card-text mb-0">
+            <i class="bi bi-building me-2"></i> {{ user?.company?.name }}
+          </p>
+          <p class="card-text text-muted fst-italic">{{ user?.company?.catchPhrase }}</p>
+          <p class="card-text text-muted fst-italic">{{ user?.company?.bs }}</p>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,25 @@
+<div class="card" style="width: 18rem; border: 1px solid #ccc; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);">
+  <div class="card-body" style="padding: 1rem;">
+    <img
+    src="./assets/img/profile.png"
+    alt="User Profile"
+    class="rounded-circle profile-img mb-3"
+    width="150px"
+    height="150px"
+  />
+    <h5 class="card-title" style="font-size: 1.2rem; margin-bottom: 0.5rem;">{{ user().name }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted" style="font-style: italic; color: #777;">{{ user().username }}</h6>
+    <p class="card-text" style="line-height: 1.5;">
+      <strong>Email:</strong> {{ user().email }}<br />
+      <strong>Teléfono:</strong> {{ user().phone }}<br />
+      <strong>Sitio Web:</strong> <a href="{{ user().website }}" target="_blank" style="color: blue; text-decoration: none;">{{ user().website }}</a>
+    </p>
+    <a
+      href="javascript:void(0)"
+      class="btn btn-primary"
+      [routerLink]="['/users', user().id]"
+      style="background-color: #007bff; color: white; padding: 0.5rem 1rem; border-radius: 5px; text-decoration: none;"
+      >Ver Detalles</a
+    >
+  </div>
+</div>
