@@ -14,6 +14,7 @@ export default class DetalleUsuarioComponent {
   id = input.required<string>()
   user!: User;
   
+  mostrarDetalles = false;
   
   
     ngOnInit(){
@@ -27,6 +28,9 @@ export default class DetalleUsuarioComponent {
       });
     }
 
+    toggleDetalles() {
+      this.mostrarDetalles = !this.mostrarDetalles;
+    }
   
 
 }
